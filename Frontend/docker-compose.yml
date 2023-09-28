@@ -1,14 +1,14 @@
 version: "3"
 services:
   server:
-    image: pabloa009/api-pra2
+    image: abypalencia/api-pro1
     command: npm start
     volumes:
       - ./server:/api/src/app
     ports:
       - "5000:5000"
   client:
-    image: pabloa009/frontend-pra2
+    image: abypalencia/frontend-pro1
     command: npm start
     volumes:
       - ./client:/usr/src/app
