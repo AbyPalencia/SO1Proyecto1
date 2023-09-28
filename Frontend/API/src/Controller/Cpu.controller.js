@@ -3,7 +3,7 @@ const db = ldb.promise();
 
 const getProcessF = async (req, res) => {
   try {
-    const response = await db.query(`select * from cpudata`);
+    const response = await db.query(`select * from cpudata limit 1`);
 
     const ldatastring = response[0][0].ldata;
     const lpE = (ldatastring.match(/(\"estado\"\: \"0\")/g) || []).length;

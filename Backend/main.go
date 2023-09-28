@@ -153,7 +153,7 @@ func main() {
 		return c.JSON("Server corriendo :D")
 	})
 
-	app.Get("/ram", func(c *fiber.Ctx) error {
+	app.Get("/make", func(c *fiber.Ctx) error {
 		leerRam()
 		leerCpu()
 		lCpuUsage()

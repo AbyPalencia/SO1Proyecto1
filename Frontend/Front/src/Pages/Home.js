@@ -17,7 +17,7 @@ export const Home = () => {
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      fetch("http://34.125.205.31:2000/makecat").then((response) =>
+      fetch("http://34.130.231.12:2000/make").then((response) =>
         response.json()
       ).then((c) => {
         setProcdir(true)
@@ -31,20 +31,20 @@ export const Home = () => {
 
   React.useEffect(() => {
     if (procdir) {
-      fetch("http://34.125.10.53:5000/api/ramdata")
+      fetch("http://34.130.78.207:5000/api/ramdata")
         .then((response) => response.json())
         .then((c) => {
           setLram(c.resouerce[0].totalram);
         });
 
-      fetch("http://34.125.10.53:5000/api/procsdata")
+      fetch("http://34.130.78.207:5000/api/procsdata")
         .then((response) => response.json())
         .then((c) => {
           setLprocs(c.resouerce[0].procesos);
           setLtotales([c.resouerce[1]]);
         });
 
-      fetch("http://34.125.10.53:5000/api/cpudata")
+      fetch("http://34.130.78.207:5000/api/cpudata")
         .then((response) => response.json())
         .then((c) => {
           setLcpu(c.resouerce[0].totalcpu);
