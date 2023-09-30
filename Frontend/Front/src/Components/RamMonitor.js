@@ -26,7 +26,8 @@ const RamMonitor = ({ ramdata }) => {
         <CircularProgress
           variant="determinate"
           value={progress}
-          color="warning"
+          color="success"
+          size="5rem"
         />
         <Box
           sx={{

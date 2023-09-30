@@ -3,7 +3,7 @@ const db = ldb.promise();
 
 const getProcessF = async (req, res) => {
   try {
-    const response = await db.query(`select * from cpudata limit 1`);
+    const response = await db.query(`SELECT (ldata) FROM cpudata order by id desc limit 1`);
 
     const ldatastring = response[0][0].ldata;
     const lpE = (ldatastring.match(/(\"estado\"\: \"0\")/g) || []).length;
@@ -82,7 +82,7 @@ const getProcessF = async (req, res) => {
 
 const getCpuUsage = async (req, res) => {
   try {
-    const response = await db.query(`select * from cpuusage limit 1`);
+    const response = await db.query(`SELECT (ldata) FROM cpuusage order by id desc limit 1`);
 
     let ldata = JSON.parse(response[0][0].ldata.replace("cpu-load", "cpuload"));
 

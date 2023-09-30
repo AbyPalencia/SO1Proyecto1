@@ -119,7 +119,7 @@ const TablaProcesos = ({ procsdata }) => {
                 <TableCell align="center">Nombre</TableCell>
                 <TableCell align="center">Usuario</TableCell>
                 <TableCell align="center">Estado</TableCell>
-                <TableCell align="center">%RAM</TableCell>
+                <TableCell align="center">RAM</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -142,7 +142,7 @@ const TablaProcesos = ({ procsdata }) => {
             ml: 178,
           }}
         >
-          201709003
+          2017000837
         </Typography>
       </Paper>
     </>

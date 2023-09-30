@@ -26,7 +26,8 @@ const CpuMonitor = ({ cpudata }) => {
         <CircularProgress
           variant="determinate"
           value={progress}
-          color="secondary"
+          color="success"
+          size="5rem"
         />
         <Box
           sx={{
