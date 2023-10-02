@@ -92,57 +92,6 @@ func leerCpu() {
 }
 
 
-// func dropCreate() {
-// 	lconnection := DbConnection()
-
-// 	lq3, err := lconnection.Prepare(`drop table if exists cpudata;`)
-// 	if err != nil {
-// 		panic(err.Error())
-// 	}
-// 	lq3.Exec()
-
-// 	lq4, err := lconnection.Prepare(`drop table if exists ramdata;`)
-// 	if err != nil {
-// 		panic(err.Error())
-// 	}
-// 	lq4.Exec()
-
-// 	lq5, err := lconnection.Prepare(`drop table if exists cpuusage;`)
-// 	if err != nil {
-// 		panic(err.Error())
-// 	}
-// 	lq5.Exec()
-
-// 	lq6, err := lconnection.Prepare(`create table ramdata(
-// 		total varchar(50),
-// 		free varchar(50),
-// 		porcentaje varchar(50),
-// 		used varchar(50)
-// 	);`)
-// 	if err != nil {
-// 		panic(err.Error())
-// 	}
-// 	lq6.Exec()
-
-// 	lq7, err := lconnection.Prepare(`create table cpudata (
-// 		ldata varchar(16000)
-// 	);`)
-// 	if err != nil {
-// 		panic(err.Error())
-// 	}
-// 	lq7.Exec()
-
-// 	lq9, err := lconnection.Prepare(`create table cpuusage (
-// 	ldata varchar(500)
-// 	);`)
-// 	if err != nil {
-// 		panic(err.Error())
-// 	}
-// 	lq9.Exec()
-
-// 	fmt.Println("tablas borradas y creadas")
-// }
-
 func main() {
 
 	app := fiber.New()
